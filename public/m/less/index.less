@@ -1,23 +1,22 @@
-@golbalColor:#006699;
+@import './base.less';
 
-#header{
-    position: relative;
-    height: 45px;
-    background-color: @golbalColor;
-    p{     
-      text-align: center;
-      line-height: 45px;
-      color:white;
-      font-size: 18px;
-    }
-    .fa-search{
-        color:white;
-        position: absolute;
-        right:20px;
-        top:15px;
-
-    }
+body{
+    background-color: white;
+    padding-top:45px;
+    height: 100%;
+   
 }
+
+#main{
+
+    height: 100%;
+}
+//mui的样式设置
+.mui-scroll-wrapper{
+    padding-top:45px;
+    padding-bottom: 45px;
+}
+// 录播图的部分
 #lunbotu{
   
     .mui-slider-indicator{
@@ -29,3 +28,50 @@
         
     }
 }
+// 导航栏的部分
+  nav{
+      padding: 0 10px;
+      border-bottom: 1px solid #ccc;
+      img{
+          width: 100%;
+      }
+  }
+  //广告部分
+  #adv{
+      padding: 10px 10px;
+     
+         img{
+             width: 100%;
+         }   
+  }
+
+//   品牌部份的开始
+  #brand{
+      img{
+          width: 100%;
+      }
+}
+//运动生活区的开始
+ #sport, #woman, #man {
+       padding: 0 5px;
+     .title{
+         img{
+             width: 100%;
+         }
+     }
+       .mui-col-xs-6 {
+        padding: 5px 5px;
+          a{   
+             padding: 5px 10px;
+              display: block;
+              box-shadow: 0 0 5px black;
+              text-align: center;
+            img{
+                width: 100%;
+            }
+          }
+        
+      }
+ }
+
+

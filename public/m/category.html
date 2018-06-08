@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是自己写的乐淘</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的css 此处rel需要修改 -->
+    <link rel="stylesheet/less" href="./less/category.less">
+    <!-- 引入less需要的js -->
+    <script src='./lib/less/less.js'></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="" class='icon_back fa fa-arrow-left'></a>
+        <form action="">
+            <input type="text" class="search" placeholder="请在此处输入商品">
+        </form>
+        <a href=".search" class='fa fa-search'></a>
+    </header>
+     <div id="main">
+      
+        <div class="left">
+            <ul>
+          
+            </ul>
+        </div>
+       
+        <div class="right">
+                <div class="mui-scroll-wrapper">                  
+                        <div class="mui-scroll">
+            <div class="mui-row">
+                <!-- <div class="mui-col-xs-4"><img src="./images/brand1.png" alt=""></div>
+                <div class="mui-col-xs-4"><img src="./images/brand2.png" alt=""></div>
+                <div class="mui-col-xs-4"><img src="./images/brand3.png" alt=""></div>
+                <div class="mui-col-xs-4"><img src="./images/brand4.png" alt=""></div>
+                <div class="mui-col-xs-4"><img src="./images/brand5.png" alt=""></div> -->
+            </div>
+        </div>
+     </div>
+    </div>
+</div>
+    <footer>
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="./index.html" ><span class='tab_home fa fa-home now'></span><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="./category.html" class='active'><span class="tab_cate fa fa-bars"></span><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><span class='tab_cart fa fa-shopping-cart'></span><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><span class='tab_user fa fa-user'></span><span>会员中心</span></a></div>
+        </div>
+    </footer>
+         <!-- 通过模板引擎调取一级菜单的数据 -->
+         <script type='text/html' id='topCategory'>
+            {{each rows }}
+                    <li  dataId={{$value.id}}>{{$value.categoryName}}</li>
+            {{/each}}
+
+        </script>
+        <!-- 通过模板引擎调取二级菜单的数据 -->
+        <script type='text/html' id='secondCategory'>
+            {{each rows}}
+            
+            <div class="mui-col-xs-4"><img src={{$value.brandLogo}} alt="">
+                <p>{{$value.brandName}}</p>
+            </div>
+      {{/each}}
+        </script>
+
+    <script src='./lib/zepto/zepto.min.js'></script>
+    <script src='./lib/mui/js/mui.js'></script>
+    <script src='./lib/artTemplate/template.js'></script>
+    <script src='./js/category.js'></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+@import './base.less';
+
+html,body{
+    height: 100%;
+}
+body{
+    background-color: #ccc;
+}
+li{
+    list-style: none;
+}
+#header{
+      form{
+          height: 100%;
+          padding: 0 50px;
+          padding-top:5px;
+          input{
+              height:80%;
+              margin-bottom: 0px;
+          }
+       
+      }
+    .fa-arrow-left{
+        position: absolute;
+        left:15px;
+        top:15px;
+        color:white;
+    }
+}
+#main{
+    padding-top:55px;
+    height: 100%;
+    
+    display: flex;
+    .left{
+       width: 80px;
+       ul{
+           background-color: white;
+           margin: 0;
+           padding: 0;
+           li{  line-height: 40px;
+               height: 40px;
+               border-bottom: 1px solid black;
+               border-right: 1px solid black;
+               text-align: center;
+           }
+           li.active{
+               background-color: #ccc;
+           }
+       }
+    }
+    .right{
+        position: relative;
+        flex:1;
+        >.mui-scroll-wrapper{
+            >.mui-scroll{
+                padding: 0 10px;
+                height: 101%;
+                .mui-row{
+                    background-color: #fff;
+                   
+                    
+                    img{
+                        width: 100%;
+                    }
+                    p{
+                        text-align: center;
+                    }
+                
+            }
+            }
+
+       
+
+        }
+        
+       
+          
+      
+    }
+}
