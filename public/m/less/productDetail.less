@@ -1,0 +1,129 @@
+@import './base.less';
+
+body{
+    background-color: white;
+}
+
+
+#header{
+    .fa-arrow-left{
+        color:white;
+        position: absolute;
+        left:5px;
+        top:15px;
+    }
+    h4{
+        color:white;
+        text-align: center;
+         padding-top: 10px;
+    }
+}
+main{
+    padding-top:45px;
+}
+
+section.detail{
+ 
+    .name{
+
+        padding: 0 10px;
+        border-bottom: 1px solid #ccc;
+
+        >p{
+            color:black;
+            font-size: 20px;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+        }
+    }
+    .price{
+        padding: 0px 10px;
+        border-bottom: 1px solid #ccc;
+        height: 50px;
+        line-height: 50px;
+        .newPrice{
+            color:red;
+            font-size: 30px;
+            padding-right: 10px
+        }
+        .oldPrice{
+            color:#666;
+        }
+    }
+    .size{
+        padding: 10px 10px;
+        border-bottom: 1px solid #ccc;
+        height: 100px;
+        line-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;    
+     
+          span{
+              margin-left: 5px;
+              padding: 5px;
+          
+              font-size:18px;
+              border: 1px solid #ccc;
+          }
+          span.active{
+              background-color: orange;
+          }
+    }
+    .numBox{
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 0px 10px;
+        border-bottom: 1px solid #ccc; 
+        span{
+            margin-left:20px;
+        }
+      
+    }
+}
+    
+
+
+footer{
+   .footerContainer{
+       height: 100%;
+    display: flex;
+    background-color: #ccc;
+     span{
+         display: flex;
+         flex-basis: 60px;
+         font-size: 30px;
+         justify-content: center;
+         align-items: center;
+         
+
+         font-size: 30px;
+     }
+    .buyContainer{
+         flex:1;
+         display: flex;
+         justify-content: space-around;
+         align-content: center;
+              line-height: 100%; 
+               padding: 3px 10px;
+  
+               .addCart{
+                width: 50%;
+                   color:white;
+                   background-color:#991020;
+                   font-size: 14px;
+                 
+               }
+               .buy{
+                width: 50%;
+                   background-color:#fa672d;
+                   color:white;
+                   font-size: 14px;
+                   
+               }
+
+          }
+     }
+   }

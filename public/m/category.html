@@ -23,7 +23,7 @@
         <form action="">
             <input type="text" class="search" placeholder="请在此处输入商品">
         </form>
-        <a href=".search" class='fa fa-search'></a>
+        <a href="./search.html" class='fa fa-search'></a>
     </header>
      <div id="main">
       
@@ -57,8 +57,8 @@
     </footer>
          <!-- 通过模板引擎调取一级菜单的数据 -->
          <script type='text/html' id='topCategory'>
-            {{each rows }}
-                    <li  dataId={{$value.id}}>{{$value.categoryName}}</li>
+            {{each rows  }}
+                    <li  class="{{$index==0 ? 'active' : ''}}" dataId={{$value.id}}>{{$value.categoryName}}</li>
             {{/each}}
 
         </script>

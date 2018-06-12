@@ -1,0 +1,107 @@
+@import './base.less';
+html,body{
+    height: 100%;
+}
+body{
+    background-color: white;
+}
+  ul{
+      margin: 0;
+      padding: 0;
+      li{
+        list-style: none;
+    }
+  }
+#header{
+    h4{
+        color:white;
+        text-align: center;
+        padding-top:10px;
+    }
+  
+  .fa-arrow-left{
+      position: absolute;
+      left:15px;
+      top:15px;
+      color:white;
+  }
+}
+//搜索栏
+main{
+
+    position: relative;
+    padding-top:55px;
+ 
+    height: 100%;
+    .mainInner{
+        height: 100%;
+        position:relative;
+        width: 100%;
+        .mui-scroll-wrapper{
+          
+            padding-bottom: 45px;
+        }
+        
+    }
+    .searchBox{ 
+     
+        position: relative;
+        padding: 0  30px; 
+        height: 40px;
+        .search-btn{
+            height: 100%;  
+            position: absolute;
+            right:10px;
+            top:0px;     
+        }
+        input{
+              border: 1px solid @golbalColor;
+     
+           height: 40px;
+        }
+
+        
+     
+        
+    }
+   .constract{
+       margin-top:10px;
+       height: 30px;
+       background-color: #eee;
+       line-height: 30px;
+     >.mui-row{
+         width: 100%;
+         span{ text-align: center;
+            color: black;
+        }
+     }
+      
+   }
+   #man {
+    padding: 0 5px;
+  .title{
+      img{
+          width: 100%;
+      }
+  }
+    .mui-col-xs-6 {
+     padding: 5px 5px;
+      p.title{
+       //限制文本内容一行显示
+        overflow: hidden;  
+        white-space: nowrap;  
+        text-overflow: ellipsis;
+      }
+       a{   
+          padding: 5px 10px;
+           display: block;
+           box-shadow: 0 0 5px black;
+           text-align: center;
+         img{
+             width: 100%;
+         }
+       }
+     
+   }
+}
+}

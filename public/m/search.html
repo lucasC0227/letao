@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是自己写的乐淘</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- 引入mui -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己的css 此处rel需要修改 -->
+    <link rel="stylesheet/less" href="./less/search.less">
+    <!-- 引入less需要的js -->
+    <script src='./lib/less/less.js'></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="" class='icon_back fa fa-arrow-left'></a>
+     
+            <h4>搜索中心</h4>
+   
+    </header>
+       <main>
+           
+           <div class="searchBox">
+            <input type="text" placeholder="请输入想要搜索的商品" class='input-search'>
+            <div href="" class='search-btn mui-btn mui-btn-primary'>搜索</div>
+           </div>
+             <div class="searchContainer">
+                 <div class="searchTitle">
+                     <span>搜索历史</span>
+                    <a class='mui-pull-right empty-all'> 清空记录</a>
+                    </div>
+                    <div class="searchContent">
+                        <ul>
+                        
+                        </ul>
+                    </div>
+             </div>
+         
+       </main>
+    <footer>
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="./index.html" ><span class='tab_home fa fa-home now'></span><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="./category.html" class='active'><span class="tab_cate fa fa-bars"></span><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><span class='tab_cart fa fa-shopping-cart'></span><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><span class='tab_user fa fa-user'></span><span>会员中心</span></a></div>
+        </div>
+    </footer>
+          <!-- 运用模板引擎，将存储在localStorage的数据渲染到页面上 -->
+          <script type='text/html' id='localStorage'>
+         {{each}}
+         <li data-id={{$value.id}}>
+                <a href="#">{{$value.search}}</a>
+                 <span class='fa fa-times mui-pull-right' data-id={{$value.id}}></span>
+            </li>
+
+         {{/each}}
+                         
+        </script>
+
+    <script src='./lib/zepto/zepto.min.js'></script>
+    <script src='./lib/mui/js/mui.js'></script>
+    <script src='./lib/artTemplate/template.js'></script>
+    <script src='./js/search.js'></script>
+
+    
+</body>
+</html>
